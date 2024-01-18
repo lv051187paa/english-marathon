@@ -18,6 +18,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 img {
   max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -85,28 +86,23 @@ img {
   text-align: center;
 }
 
-.header--info {
-  flex: 8;
-}
-
 .header--info-container {
   padding: 0 15px 10px;
 }
 
 .header--title {
   font-size: 36px;
+  text-align: center;
 }
 
 .header--subtitle {
   margin-top: 20px;
+  text-align: center;
 }
 
 .header--content {
   margin-top: 20px;
-}
-
-.header--photo {
-  flex: 7;
+  text-align: center;
 }
 
 .header--action {
@@ -126,6 +122,31 @@ img {
   font-weight: 700;
 }
 
+
+/* Introduction */
+
+.introduction--container {
+  flex-direction: column;
+}
+
+.introduction--content {
+  padding: 0 15px 10px;
+}
+
+.introduction--title {
+  font-size: 36px;
+  text-align: center;
+}
+
+.introduction--text {
+  margin-top: 35px;
+  text-align: center;
+}
+
+.introduction--text p {
+  margin-top: 15px;
+}
+
 @media screen and (min-width: 576px)  {
   .header--info-container {
     padding: 0 20px 10px;
@@ -136,10 +157,12 @@ img {
 
   .header--title {
     font-size: 48px;
+    text-align: left;
   }
 
   .header--content {
     margin-top: 30px;
+    text-align: left;
   }
 
   .header--action {
@@ -148,6 +171,13 @@ img {
 
   .header--note {
     margin-top: 20px;
+  }
+
+
+  /* Introduction */
+
+  .introduction--title {
+    font-size: 48px;
   }
 }
 
@@ -166,6 +196,49 @@ img {
     justify-content: space-between;
     display: flex;
     flex-direction: column;
+  }
+
+  .header--info {
+    flex: 8;
+  }
+
+  .header--photo {
+    flex: 7;
+  }
+
+  /* Introduction */
+
+  .introduction--container {
+    flex-direction: row;
+  }
+
+  .header--subtitle {
+    text-align: left;
+  }
+
+  .introduction--content {
+    padding: 0 40px 0 70px;
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .introduction--photo {
+    flex: 7;
+  }
+
+  .introduction--title {
+    text-align: left;
+  }
+
+  .introduction--text {
+    margin-top: 65px;
+    text-align: left;
+  }
+
+  .introduction--text p {
+    margin-top: 25px;
   }
 }
 
@@ -195,28 +268,16 @@ img {
     padding: 0 90px 35px;
     display: block;
     flex: unset;
-    mt0
-  }
-
-  .header--info {
-    flex: 8;
+    margin-top: 0;
   }
 
   .header--title {
     font-size: 64px;
   }
 
-  .header--subtitle {
-    margin-top: 20px;
-  }
-
   .header--content {
     margin-top: 55px;
     max-width: 545px;
-  }
-
-  .header--photo {
-    flex: 7;
   }
 
   .header--action {
@@ -225,6 +286,22 @@ img {
 
   .header--note {
     margin-top: 35px;
+  }
+
+
+  /* Introduction */
+
+  .introduction--content {
+    /*padding: 0 40px 0 70px;*/
+  }
+
+  .introduction--title {
+    font-size: 64px;
+    text-align: center;
+  }
+
+  .introduction--text {
+    margin-top: 125px;
   }
 }
 
