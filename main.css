@@ -2,6 +2,7 @@ body {
   font-family: "inter", "Arial", serif;
   margin: 0;
   padding: 0;
+  background: #EFEFF0;
 }
 
 body * {
@@ -14,6 +15,12 @@ h1, h2, h3, h4, h5, h6, p, a {
   text-decoration: none;
   text-transform: none;
   color: inherit;
+}
+
+ul, li {
+  margin: 0;
+  /*padding: 0;*/
+  /*list-style-type: none;*/
 }
 
 img {
@@ -143,17 +150,97 @@ img {
   text-align: center;
 }
 
-.introduction--text p {
+.introduction--text p:not(:first-child) {
   margin-top: 15px;
 }
 
-@media screen and (min-width: 576px)  {
+
+/* Advantages */
+
+.advantages--container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+}
+
+.advantages--title-text {
+  color: #EE486D;
+  font-size: 36px;
+  text-align: center;
+}
+
+.advantages--title-note {
+  font-size: 14px;
+  color: #373661;
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+}
+
+.advantages--action {
+  border: 5px solid #EE486D;
+  color: #1C1A1A;
+  margin: 15px auto 0;
+}
+
+.advantages--content {
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+.advantages--content-list {
+  padding-left: 10px;
+  color: #373661;
+  max-width: 100%;
+}
+
+.advantages--content-list li:not(:first-child) {
+  margin-top: 15px;
+}
+
+
+/* Description */
+
+.description--container {
+  display: flex;
+  background: #E0BFBF url("/images/background/description-bg.png") no-repeat bottom left;
+}
+
+.description--title {
+  border: 5px solid #EE486D;
+  background: #E67E90;
+}
+
+.description--title-disclaimer {
+  color: #000000;
+  font-weight: 700;
+}
+
+.description--title-text {
+  color: #F5F7F6;
+}
+
+.description--item:not(:first-child) {
+  margin-top: 10px;
+}
+
+.description--item-title {
+  font-size: 24px;
+}
+
+.description--item-text {
+  margin-top: 10px;
+  padding-left: 20px;
+  line-height: 1.375;
+}
+
+@media screen and (min-width: 576px) {
   .header--info-container {
     padding: 0 20px 10px;
   }
 }
 
-@media screen and (min-width: 768px)  {
+@media screen and (min-width: 768px) {
 
   .header--title {
     font-size: 48px;
@@ -175,13 +262,20 @@ img {
 
 
   /* Introduction */
-
   .introduction--title {
     font-size: 48px;
   }
+
+  .introduction--title-note {
+    font-size: 18px;
+  }
+
+  .advantages--container {
+    /*flex-direction: row;*/
+  }
 }
 
-@media screen and (min-width: 992px)  {
+@media screen and (min-width: 992px) {
   .header--main {
     flex-direction: row;
   }
@@ -205,6 +299,7 @@ img {
   .header--photo {
     flex: 7;
   }
+
 
   /* Introduction */
 
@@ -237,18 +332,100 @@ img {
     text-align: left;
   }
 
-  .introduction--text p {
+  .introduction--text p:not(:first-child) {
     margin-top: 25px;
+  }
+
+
+  /* Advantages */
+
+  .advantages--container {
+    padding: 90px 80px 85px;
+    flex-direction: row;
+  }
+
+  .advantages--title {
+    max-width: 455px;
+    flex: 5;
+  }
+
+  .advantages--title-text {
+    text-align: left;
+  }
+
+  .advantages--title-note {
+    text-align: left;
+    margin-top: 25px;
+  }
+
+  .advantages--action {
+    margin: 65px auto 0;
+  }
+
+  .advantages--content {
+    flex: 9;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0;
+    flex-direction: row;
+  }
+
+  .advantages--content-list {
+    max-width: 400px;
+  }
+
+  .advantages--content-list li:not(:first-child) {
+    margin-top: 25px;
+  }
+
+
+  /* Description */
+
+  .description--container {
+    padding: 70px 100px 170px 0;
+    align-items: flex-start;
+  }
+
+  .description--title {
+    padding: 35px 60px;
+    flex: 2;
+    max-width: 50%;
+  }
+
+  .description--title-text {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .description--title-disclaimer {
+    font-size: 18px;
+    padding-left: 40px;
+  }
+
+  .description--list {
+    flex: 3;
+    max-width: 47%;
+    margin-left: 90px;
+    padding-top: 90px;
+  }
+
+  .description--item-title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .description--item-text {
+    font-size: 24px;
   }
 }
 
-@media screen and (min-width: 1200px)  {
+@media screen and (min-width: 1200px) {
   .header--info-container {
     margin-top: 100px;
   }
 }
 
-@media screen and (min-width: 1300px)  {
+@media screen and (min-width: 1300px) {
   .text {
     font-size: 24px;
   }
@@ -259,7 +436,6 @@ img {
   }
 
   /* Header */
-
   .header--name {
     font-size: 24px;
   }
@@ -290,7 +466,6 @@ img {
 
 
   /* Introduction */
-
   .introduction--content {
     /*padding: 0 40px 0 70px;*/
   }
@@ -303,6 +478,14 @@ img {
   .introduction--text {
     margin-top: 125px;
   }
+
+
+  /* Advantages */
+
+  .advantages--title-text {
+    color: #EE486D;
+    font-size: 48px;
+  }
 }
 
 @media screen and (min-width: 1600px) {
@@ -312,5 +495,14 @@ img {
     flex-direction: column;
     justify-content: space-between;
     margin-top: 100px;
+  }
+
+  .advantages--content {
+    column-gap: 15px;
+  }
+
+  .advantages--content-list {
+    max-width: 100%;
+    flex: 1;
   }
 }
