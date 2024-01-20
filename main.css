@@ -204,11 +204,14 @@ img {
 .description--container {
   display: flex;
   background: #E0BFBF url("/images/background/description-bg.png") no-repeat bottom left;
+  flex-direction: column;
+  padding: 10px 15px;
 }
 
 .description--title {
   border: 5px solid #EE486D;
   background: #E67E90;
+  padding: 15px 20px;
 }
 
 .description--title-disclaimer {
@@ -218,6 +221,12 @@ img {
 
 .description--title-text {
   color: #F5F7F6;
+  text-align: center;
+  font-size: 24px;
+}
+
+.description--list {
+  margin-top: 25px;
 }
 
 .description--item:not(:first-child) {
@@ -225,13 +234,15 @@ img {
 }
 
 .description--item-title {
-  font-size: 24px;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .description--item-text {
   margin-top: 10px;
   padding-left: 20px;
   line-height: 1.375;
+  font-size: 18px;
 }
 
 @media screen and (min-width: 576px) {
@@ -382,31 +393,15 @@ img {
   /* Description */
 
   .description--container {
-    padding: 70px 100px 170px 0;
-    align-items: flex-start;
+    padding: 20px 80px;
   }
 
   .description--title {
     padding: 35px 60px;
-    flex: 2;
-    max-width: 50%;
   }
 
   .description--title-text {
     font-size: 36px;
-    line-height: 1.2;
-  }
-
-  .description--title-disclaimer {
-    font-size: 18px;
-    padding-left: 40px;
-  }
-
-  .description--list {
-    flex: 3;
-    max-width: 47%;
-    margin-left: 90px;
-    padding-top: 90px;
   }
 
   .description--item-title {
@@ -422,6 +417,34 @@ img {
 @media screen and (min-width: 1200px) {
   .header--info-container {
     margin-top: 100px;
+  }
+
+  .description--container {
+    padding: 70px 100px 170px 0;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+
+  .description--title {
+    flex: 2;
+    max-width: 50%;
+  }
+
+  .description--title-text {
+    text-align: left;
+  }
+
+  .description--title-disclaimer {
+    font-size: 18px;
+    padding-left: 40px;
+  }
+
+  .description--list {
+    flex: 3;
+    max-width: 47%;
+    margin-left: 90px;
+    margin-top: 0;
+    padding-top: 90px;
   }
 }
 
