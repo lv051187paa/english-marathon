@@ -596,6 +596,13 @@ img {
   .programme--list {
     margin-top: 40px;
   }
+
+
+  /* Feedbacks */
+
+  .feedbacks--container {
+    padding: 25px 100px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
